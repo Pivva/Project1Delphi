@@ -1,0 +1,34 @@
+program TrocaPneuCarro;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+
+procedure TrocarPneu;
+begin
+  Writeln('1. Estacionar o carro.');
+  Writeln('2. Desligar o motor e acionar o freio de mão.');
+  Writeln('3. Retirar o estepe, macaco e chave de roda do porta-malas.');
+  Writeln('4. Posicionar o macaco no ponto indicado pelo manual do carro.');
+  Writeln('5. Levantar o carro utilizando o macaco.');
+  Writeln('6. Utilizar a chave de roda para afrouxar os parafusos da roda do pneu furado.');
+  Writeln('7. Retirar a roda do pneu furado.');
+  Writeln('8. Colocar o estepe no lugar, apertando os parafusos manualmente.');
+  Writeln('9. Baixar o carro o macaco.');
+  Writeln('10. Apertar os parafusos com a chave de roda.');
+  Writeln('11. Guardar a roda com pneu furada, o macaco e a chave de roda no porta-malas.');
+  Writeln('12. Verificar se todos os itens utilizados foram guardados.');
+  Writeln('13. Retornar à estrada com cuidado.');
+
+  Writeln('Troca de pneu realizada!');
+end;
+
+begin
+  try
+    TrocarPneu;
+  except
+    on E: Exception do
+      Writeln('Ocorreu um erro: ', E.ClassName, ' - ', E.Message);
+  end;
+end.
