@@ -1,0 +1,70 @@
+unit UpesqCidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  Tfrm_PesqCidade = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    DBGrid1: TDBGrid;
+    qryPesquisaCidade: TFDQuery;
+    qryPesquisaCidadeID_Cidade: TFDAutoIncField;
+    qryPesquisaCidadeNM_Cidade: TStringField;
+    qryPesquisaCidadeID_UF: TStringField;
+    qryPesquisaCidadeCEP_Inicial: TStringField;
+    qryPesquisaCidadeCEP_Final: TStringField;
+    DsPesquisaCidade: TDataSource;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_PesqCidade: Tfrm_PesqCidade;
+
+implementation
+
+{$R *.dfm}
+
+uses Ucidades;
+
+procedure Tfrm_PesqCidade.BitBtn1Click(Sender: TObject);
+begin
+  edit1.Clear;
+  edit1.SetFocus;
+end;
+
+procedure Tfrm_PesqCidade.BitBtn2Click(Sender: TObject);
+begin
+  if qryPesquisaCidade.Active then
+  begin
+    qryPesquisaCidade.Filter := 'ID_Cidade = ' + IntToStr(qryPesquisaCidadeID_Cidade.Value);
+    qryPesquisaCidade.Filtered := True;
+  end;
+end;
+
+
+procedure Tfrm_PesqCidade.Edit1Change(Sender: TObject);
+begin
+  qryPesquisaCidade.SQL.Clear;
+  qryPesquisaCidade.SQL.Add('select * from cadastro.cidades where NM_Cidade like' + quotedstr(edit1.Text+'%'));
+  qryPesquisaCidade.ExecSQL;
+  qryPesquisaCidade.Open;
+end;
+
+end.
+

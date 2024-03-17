@@ -1,0 +1,45 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Projeto1 in 'Projeto1.pas' {Form1},
+  Uclientes in 'Uclientes.pas' {frm_clientes},
+  Ucidades in 'Ucidades.pas' {frm_cidades},
+  UpesqCidades in 'UpesqCidades.pas' {frm_PesqCidade};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_clientes, frm_clientes);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_PesqCidade, frm_PesqCidade);
+  Application.CreateForm(Tfrm_PesqCidade, frm_PesqCidade);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_cidades, frm_cidades);
+  Application.CreateForm(Tfrm_PesqCidade, frm_PesqCidade);
+  Application.Run;
+end.

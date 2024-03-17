@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/08 16:23:39.000.278,=C:\Users\felipe.piva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/08 17:34:31.000.070,=C:\Users\felipe.piva\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/08 17:49:40.000.701,C:\Users\felipe.piva\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Projeto1.pas</Transaction>
+    <Transaction>2024/03/08 17:49:40.000.701,C:\Users\felipe.piva\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Projeto1.dfm</Transaction>
+    <Transaction>2024/03/08 17:49:42.000.818,C:\Users\felipe.piva\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Project1.dproj</Transaction>
+    <Transaction>2024/03/08 21:00:42.000.396,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit1.pas</Transaction>
+    <Transaction>2024/03/08 21:00:55.000.628,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit2.pas</Transaction>
+    <Transaction>2024/03/08 21:40:23.000.816,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.pas</Transaction>
+    <Transaction>2024/03/08 21:41:30.000.637,C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Ucidades.dfm=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.dfm</Transaction>
+    <Transaction>2024/03/08 21:41:30.000.637,C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Ucidades.pas=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.pas</Transaction>
+    <Transaction>2024/03/08 22:22:20.000.344,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.pas</Transaction>
+    <Transaction>2024/03/08 22:31:34.000.574,C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.pas=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Uclientes.pas</Transaction>
+    <Transaction>2024/03/08 22:31:34.000.574,C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.dfm=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Uclientes.dfm</Transaction>
+    <Transaction>2024/03/10 13:23:02.000.774,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.pas</Transaction>
+    <Transaction>2024/03/10 13:26:25.000.717,C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Urelatorios.dfm=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.dfm</Transaction>
+    <Transaction>2024/03/10 13:26:25.000.717,C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Urelatorios.pas=C:\Users\felipe.piva\Desktop\Teste Dev Junior Del´hi_SQL\Unit3.pas</Transaction>
+    <Transaction>2024/03/14 20:46:35.000.038,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\Unit2.pas</Transaction>
+    <Transaction>2024/03/14 20:48:04.000.386,C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\UpesqCidades.pas=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\Unit2.pas</Transaction>
+    <Transaction>2024/03/14 20:48:04.000.386,C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\UpesqCidades.dfm=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\Unit2.dfm</Transaction>
+    <Transaction>2024/03/15 13:44:04.000.844,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\Unit2.pas</Transaction>
+    <Transaction>2024/03/15 13:45:56.000.111,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\Unit2.pas</Transaction>
+    <Transaction>2024/03/15 13:50:31.000.979,C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\Unit2.dfm=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\UpesqClientes.dfm</Transaction>
+    <Transaction>2024/03/15 13:50:31.000.979,C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\Unit2.pas=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL - Copia\UpesqClientes.pas</Transaction>
+    <Transaction>2024/03/17 09:27:09.505,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL\Unit2.pas</Transaction>
+    <Transaction>2024/03/17 09:31:55.872,C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL\Urelatorios.dfm=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL\Unit2.dfm</Transaction>
+    <Transaction>2024/03/17 09:31:55.872,C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL\Urelatorios.pas=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL\Unit2.pas</Transaction>
+    <Transaction>2024/03/17 10:26:00.561,=C:\Users\felipe.piva\Desktop\Teste Dev Junior Delphi_SQL\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

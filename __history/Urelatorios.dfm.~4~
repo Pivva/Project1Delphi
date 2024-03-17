@@ -1,0 +1,420 @@
+object form_relatorio: Tform_relatorio
+  Left = 0
+  Top = 0
+  Caption = 'Relat'#243'rios'
+  ClientHeight = 282
+  ClientWidth = 474
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poMainFormCenter
+  TextHeight = 15
+  object pnl_fundo: TPanel
+    Left = 0
+    Top = 0
+    Width = 474
+    Height = 282
+    Hint = 'Tipo do Relat'#243'rio'
+    Align = alClient
+    BevelKind = bkFlat
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 640
+    ExplicitHeight = 480
+    object Label1: TLabel
+      Left = 8
+      Top = 16
+      Width = 228
+      Height = 25
+      Caption = 'GERA'#199#195'O DE RELAT'#211'RIOS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -18
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 119
+      Top = 58
+      Width = 41
+      Height = 17
+      Caption = 'Inicial:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 225
+      Top = 58
+      Width = 34
+      Height = 17
+      Caption = 'Final:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 17
+      Top = 58
+      Width = 60
+      Height = 17
+      Caption = 'Intervalo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 17
+      Top = 92
+      Width = 82
+      Height = 15
+      Caption = 'C'#243'digo Cliente:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 17
+      Top = 127
+      Width = 82
+      Height = 15
+      Caption = 'C'#243'digo Cidade:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 17
+      Top = 164
+      Width = 63
+      Height = 15
+      Caption = 'Estado (UF):'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object BitBtn1: TBitBtn
+      Left = 119
+      Top = 222
+      Width = 100
+      Height = 25
+      Caption = 'Visualizar'
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 225
+      Top = 223
+      Width = 100
+      Height = 25
+      Caption = 'Voltar'
+      TabOrder = 1
+    end
+    object dbe_data_inicio: TMaskEdit
+      Tag = 5
+      Left = 119
+      Top = 89
+      Width = 100
+      Height = 23
+      Hint = 'C'#243'digo Inicial'
+      TabOrder = 2
+      Text = ''
+    end
+    object dbe_data_final: TMaskEdit
+      Tag = 5
+      Left = 225
+      Top = 89
+      Width = 100
+      Height = 23
+      Hint = 'C'#243'digo Final'
+      TabOrder = 3
+      Text = ''
+    end
+  end
+  object MaskEdit1: TMaskEdit
+    Tag = 5
+    Left = 121
+    Top = 127
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Inicial'
+    TabOrder = 1
+    Text = ''
+  end
+  object MaskEdit2: TMaskEdit
+    Tag = 5
+    Left = 227
+    Top = 127
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Final'
+    TabOrder = 2
+    Text = ''
+  end
+  object MaskEdit3: TMaskEdit
+    Tag = 5
+    Left = 121
+    Top = 163
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Inicial'
+    TabOrder = 3
+    Text = ''
+  end
+  object MaskEdit4: TMaskEdit
+    Tag = 5
+    Left = 227
+    Top = 163
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Final'
+    TabOrder = 4
+    Text = ''
+  end
+  object qryconsulta: TFDQuery
+    Active = True
+    Connection = Conexao_consulta
+    SQL.Strings = (
+      
+        'SELECT cl.id_Cliente, cl.NM_Cliente, c.ID_Cidade, c.NM_Cidade, c' +
+        '.ID_UF'
+      'FROM clientes cl'
+      'INNER JOIN cidades c ON cl.NM_Cidade = c.NM_Cidade;')
+    Left = 272
+    Top = 96
+    object qryconsultaid_Cliente: TFDAutoIncField
+      FieldName = 'id_Cliente'
+      Origin = 'id_Cliente'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object qryconsultaNM_Cliente: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'NM_Cliente'
+      Origin = 'NM_Cliente'
+      Size = 30
+    end
+    object qryconsultaID_Cidade: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'ID_Cidade'
+      Origin = 'ID_Cidade'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object qryconsultaNM_Cidade: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'NM_Cidade'
+      Origin = 'NM_Cidade'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 30
+    end
+    object qryconsultaID_UF: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'ID_UF'
+      Origin = 'ID_UF'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 2
+    end
+  end
+  object Conexao_consulta: TFDConnection
+    Params.Strings = (
+      'Database=cadastro'
+      'User_Name=root'
+      'Password=123456'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 272
+    Top = 32
+  end
+  object DsConsulta: TDataSource
+    DataSet = qryconsulta
+    Left = 376
+    Top = 160
+  end
+  object DBConsulta: TppDBPipeline
+    DataSource = DsConsulta
+    UserName = 'DBConsulta'
+    Left = 376
+    Top = 96
+    object ppDBPipeline1ppField1: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'id_Cliente'
+      FieldName = 'id_Cliente'
+      FieldLength = 0
+      DataType = dtLongint
+      DisplayWidth = 0
+      Position = 0
+    end
+    object ppDBPipeline1ppField2: TppField
+      FieldAlias = 'NM_Cliente'
+      FieldName = 'NM_Cliente'
+      FieldLength = 30
+      DisplayWidth = 30
+      Position = 1
+    end
+    object ppDBPipeline1ppField3: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'ID_Cidade'
+      FieldName = 'ID_Cidade'
+      FieldLength = 0
+      DataType = dtInteger
+      DisplayWidth = 10
+      Position = 2
+    end
+    object ppDBPipeline1ppField4: TppField
+      FieldAlias = 'NM_Cidade'
+      FieldName = 'NM_Cidade'
+      FieldLength = 30
+      DisplayWidth = 30
+      Position = 3
+    end
+    object ppDBPipeline1ppField5: TppField
+      FieldAlias = 'ID_UF'
+      FieldName = 'ID_UF'
+      FieldLength = 2
+      DisplayWidth = 2
+      Position = 4
+    end
+  end
+  object ppDBConsulta: TppReport
+    AutoStop = False
+    DataPipeline = DBConsulta
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.PaperName = 'Carta (8.5" x 11")'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.SaveDeviceSettings = False
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 279400
+    PrinterSetup.mmPaperWidth = 215900
+    PrinterSetup.PaperSize = 1
+    ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+    DeviceType = 'Screen'
+    DefaultFileDeviceType = 'PDF'
+    EmailSettings.ReportFormat = 'PDF'
+    EmailSettings.ConnectionSettings.MailService = 'SMTP'
+    EmailSettings.ConnectionSettings.WebMail.GmailSettings.OAuth2.AuthStorage = [oasAccessToken, oasRefreshToken]
+    EmailSettings.ConnectionSettings.WebMail.GmailSettings.OAuth2.RedirectURI = 'http://localhost'
+    EmailSettings.ConnectionSettings.WebMail.GmailSettings.OAuth2.RedirectPort = 0
+    EmailSettings.ConnectionSettings.WebMail.Outlook365Settings.OAuth2.AuthStorage = [oasAccessToken, oasRefreshToken]
+    EmailSettings.ConnectionSettings.WebMail.Outlook365Settings.OAuth2.RedirectURI = 'http://localhost'
+    EmailSettings.ConnectionSettings.WebMail.Outlook365Settings.OAuth2.RedirectPort = 0
+    EmailSettings.ConnectionSettings.EnableMultiPlugin = False
+    LanguageID = 'Default'
+    OpenFile = False
+    OutlineSettings.CreateNode = False
+    OutlineSettings.CreatePageNodes = False
+    OutlineSettings.Enabled = False
+    OutlineSettings.Visible = False
+    ThumbnailSettings.Enabled = True
+    ThumbnailSettings.Visible = True
+    ThumbnailSettings.DeadSpace = 30
+    ThumbnailSettings.PageHighlight.Width = 3
+    ThumbnailSettings.ThumbnailSize = tsSmall
+    PDFSettings.EmbedFontOptions = [efUseSubset]
+    PDFSettings.EncryptSettings.AllowCopy = True
+    PDFSettings.EncryptSettings.AllowInteract = True
+    PDFSettings.EncryptSettings.AllowModify = True
+    PDFSettings.EncryptSettings.AllowPrint = True
+    PDFSettings.EncryptSettings.AllowExtract = True
+    PDFSettings.EncryptSettings.AllowAssemble = True
+    PDFSettings.EncryptSettings.AllowQualityPrint = True
+    PDFSettings.EncryptSettings.Enabled = False
+    PDFSettings.EncryptSettings.KeyLength = kl40Bit
+    PDFSettings.EncryptSettings.EncryptionType = etRC4
+    PDFSettings.DigitalSignatureSettings.SignPDF = False
+    PDFSettings.FontEncoding = feAnsi
+    PDFSettings.ImageCompressionLevel = 25
+    PDFSettings.PDFAFormat = pafNone
+    PreviewFormSettings.PageBorder.mmPadding = 0
+    PreviewFormSettings.WindowState = wsMaximized
+    PreviewFormSettings.ZoomSetting = zsPageWidth
+    RTFSettings.AppName = 'ReportBuilder'
+    RTFSettings.Author = 'ReportBuilder'
+    RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+    RTFSettings.DefaultFont.Color = clWindowText
+    RTFSettings.DefaultFont.Height = -17
+    RTFSettings.DefaultFont.Name = 'Arial'
+    RTFSettings.DefaultFont.Style = []
+    RTFSettings.Title = 'Report'
+    TextFileName = '($MyDocuments)\Report.pdf'
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = True
+    XLSSettings.AppName = 'ReportBuilder'
+    XLSSettings.Author = 'ReportBuilder'
+    XLSSettings.Subject = 'Report'
+    XLSSettings.Title = 'Report'
+    XLSSettings.WorksheetName = 'Report'
+    CloudDriveSettings.DropBoxSettings.OAuth2.AuthStorage = [oasAccessToken, oasRefreshToken]
+    CloudDriveSettings.DropBoxSettings.OAuth2.RedirectURI = 'http://localhost'
+    CloudDriveSettings.DropBoxSettings.OAuth2.RedirectPort = 0
+    CloudDriveSettings.DropBoxSettings.DirectorySupport = True
+    CloudDriveSettings.GoogleDriveSettings.OAuth2.AuthStorage = [oasAccessToken, oasRefreshToken]
+    CloudDriveSettings.GoogleDriveSettings.OAuth2.RedirectURI = 'http://localhost'
+    CloudDriveSettings.GoogleDriveSettings.OAuth2.RedirectPort = 0
+    CloudDriveSettings.GoogleDriveSettings.DirectorySupport = False
+    CloudDriveSettings.OneDriveSettings.OAuth2.AuthStorage = [oasAccessToken, oasRefreshToken]
+    CloudDriveSettings.OneDriveSettings.OAuth2.RedirectURI = 'http://localhost'
+    CloudDriveSettings.OneDriveSettings.OAuth2.RedirectPort = 0
+    CloudDriveSettings.OneDriveSettings.DirectorySupport = True
+    Left = 376
+    Top = 32
+    Version = '22.03'
+    mmColumnWidth = 0
+    DataPipelineName = 'DBConsulta'
+    object ppHeaderBand1: TppHeaderBand
+      Border.mmPadding = 0
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppDetailBand1: TppDetailBand
+      Border.mmPadding = 0
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppFooterBand1: TppFooterBand
+      Border.mmPadding = 0
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppDesignLayers1: TppDesignLayers
+      object ppDesignLayer1: TppDesignLayer
+        UserName = 'Foreground'
+        LayerType = ltBanded
+        Index = 0
+      end
+    end
+    object ppParameterList1: TppParameterList
+    end
+  end
+end

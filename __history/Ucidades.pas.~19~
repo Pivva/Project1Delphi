@@ -1,0 +1,167 @@
+unit Ucidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Vcl.ComCtrls, Data.DB, Data.Win.ADODB, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQLDef,
+  FireDAC.VCLUI.Wait, FireDAC.Comp.UI, FireDAC.Phys.MySQL, FireDAC.Comp.Client,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet, Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Datasnap.DBClient,
+  Vcl.Buttons;
+
+type
+  Tfrm_cidades = class(TForm)
+    Label6: TLabel;
+    Label9: TLabel;
+    Label7: TLabel;
+    Label10: TLabel;
+    Label8: TLabel;
+    Lista_Estado: TComboBox;
+    Page_cidades: TPageControl;
+    BtnIncluir: TButton;
+    BtnAlterar: TButton;
+    BtnGravar: TButton;
+    BtnExcluir: TButton;
+    BtnCancelar: TButton;
+    Conexao: TFDConnection;
+    FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    qrytabelas: TFDQuery;
+    DBGrid1: TDBGrid;
+    DsCidades: TDataSource;
+    EdtCodigo: TDBEdit;
+    EdtCidade: TDBEdit;
+    EdtCepInicial: TDBEdit;
+    EdtEstado: TDBEdit;
+    EdtCepFinal: TDBEdit;
+    PesquisarCidades: TSpeedButton;
+    qrytabelasID_Cidade: TFDAutoIncField;
+    qrytabelasNM_Cidade: TStringField;
+    qrytabelasID_UF: TStringField;
+    qrytabelasCEP_Inicial: TStringField;
+    qrytabelasCEP_Final: TStringField;
+    procedure FormCreate(Sender: TObject);
+    procedure BtnIncluirClick(Sender: TObject);
+    procedure BtnAlterarClick(Sender: TObject);
+    procedure BtnGravarClick(Sender: TObject);
+    procedure BtnCancelarClick(Sender: TObject);
+    procedure BtnExcluirClick(Sender: TObject);
+    procedure PesquisarCidadesClick(Sender: TObject);
+  private
+    procedure inativacampos;
+    procedure ativacampos;
+    procedure inativabotoes;
+    procedure ativabotoes;
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_cidades: Tfrm_cidades;
+
+implementation
+
+{$R *.dfm}
+
+uses Projeto1, Uclientes, UpesqCidades;
+
+procedure Tfrm_cidades.ativabotoes;
+begin
+  BtnIncluir.Visible   := True;
+  BtnAlterar.Visible   := True;
+  BtnGravar.Visible    := False;
+  BtnCancelar.Visible  := False;
+  BtnExcluir.Visible   := True;
+end;
+
+procedure Tfrm_cidades.ativacampos;
+begin
+  EdtCodigo.Enabled := True;
+  EdtCidade.Enabled := True;
+  EdtEstado.Enabled := True;
+  EdtCepInicial.Enabled := True;
+  EdtCepFinal.Enabled := True;
+end;
+
+procedure Tfrm_cidades.BtnAlterarClick(Sender: TObject);
+begin
+  qrytabelas.Edit;
+  ativacampos;
+  inativabotoes;
+end;
+
+procedure Tfrm_cidades.BtnCancelarClick(Sender: TObject);
+begin
+  qrytabelas.Cancel;
+  inativacampos;
+  ativabotoes;
+end;
+
+procedure Tfrm_cidades.BtnExcluirClick(Sender: TObject);
+begin
+  if Application.MessageBox('Deseja Realmente Excluir esse Registro?', 'Confirmação', MB_ICONQUESTION + MB_YESNO) = mrYes then
+  begin
+    qrytabelas.Delete;
+  end;
+end;
+
+
+procedure Tfrm_cidades.BtnGravarClick(Sender: TObject);
+begin
+  qrytabelas.Post;
+  Conexao.Commit;
+  inativacampos;
+  showMessage('Registro Salvo com Sucesso!');
+  ativabotoes;
+end;
+
+procedure Tfrm_cidades.BtnIncluirClick(Sender: TObject);
+begin
+  qrytabelas.Insert;
+  ativacampos;
+  inativabotoes;
+end;
+
+procedure Tfrm_cidades.FormCreate(Sender: TObject);
+begin
+  Conexao.connected := True;
+  qryTabelas.Open();
+  inativacampos;
+  ativabotoes;
+end;
+
+procedure Tfrm_cidades.inativabotoes;
+begin
+  BtnIncluir.Visible   := False;
+  BtnAlterar.Visible   := False;
+  BtnGravar.Visible    := True;
+  BtnCancelar.Visible  := True;
+  BtnExcluir.Visible   := False;
+end;
+
+
+procedure Tfrm_cidades.inativacampos;
+begin
+  EdtCodigo.Enabled := False;
+  EdtCidade.Enabled := False;
+  EdtEstado.Enabled := False;
+  EdtCepInicial.Enabled := False;
+  EdtCepFinal.Enabled := False;
+
+end;
+
+procedure Tfrm_cidades.PesquisarCidadesClick(Sender: TObject);
+begin
+var PesquisarCidades : Tfrm_PesqCidade;
+begin
+         PesquisarCidades := Tfrm_PesqCidade.Create(self);
+         PesquisarCidades.ShowModal;
+         Close;
+end;
+end;
+
+end.

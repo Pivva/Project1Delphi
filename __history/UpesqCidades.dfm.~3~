@@ -1,0 +1,110 @@
+object frm_PesqCidade: Tfrm_PesqCidade
+  Left = 0
+  Top = 0
+  Caption = 'Pesquisa de Cidades'
+  ClientHeight = 369
+  ClientWidth = 462
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 8
+    Top = 16
+    Width = 413
+    Height = 25
+    Caption = 'Digite o nome da cidade que voc'#234' deseja pesquisar:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -18
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 8
+    Top = 47
+    Width = 185
+    Height = 25
+    TabOrder = 0
+    OnChange = Edit1Change
+  end
+  object BitBtn1: TBitBtn
+    Left = 215
+    Top = 47
+    Width = 100
+    Height = 25
+    Caption = 'Limpar'
+    TabOrder = 1
+    OnClick = BitBtn1Click
+  end
+  object BitBtn2: TBitBtn
+    Left = 321
+    Top = 47
+    Width = 100
+    Height = 25
+    Caption = 'Voltar'
+    TabOrder = 2
+    OnClick = BitBtn2Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 88
+    Width = 413
+    Height = 265
+    DataSource = DsPesquisaCidade
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+  object qryPesquisaCidade: TFDQuery
+    Active = True
+    Connection = frm_cidades.Conexao
+    SQL.Strings = (
+      'SELECT *'
+      'FROM cadastro.cidades;')
+    Left = 240
+    Top = 101
+    object qryPesquisaCidadeID_Cidade: TFDAutoIncField
+      FieldName = 'ID_Cidade'
+      Origin = 'ID_Cidade'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object qryPesquisaCidadeNM_Cidade: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'NM_Cidade'
+      Origin = 'NM_Cidade'
+      Size = 30
+    end
+    object qryPesquisaCidadeID_UF: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'ID_UF'
+      Origin = 'ID_UF'
+      Size = 30
+    end
+    object qryPesquisaCidadeCEP_Inicial: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'CEP_Inicial'
+      Origin = 'CEP_Inicial'
+      Size = 10
+    end
+    object qryPesquisaCidadeCEP_Final: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'CEP_Final'
+      Origin = 'CEP_Final'
+      Size = 10
+    end
+  end
+  object DsPesquisaCidade: TDataSource
+    DataSet = qryPesquisaCidade
+    Left = 240
+    Top = 160
+  end
+end

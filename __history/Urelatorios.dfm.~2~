@@ -1,0 +1,196 @@
+object form_relatorio: Tform_relatorio
+  Left = 0
+  Top = 0
+  Caption = 'Relat'#243'rios'
+  ClientHeight = 274
+  ClientWidth = 441
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poMainFormCenter
+  TextHeight = 15
+  object pnl_fundo: TPanel
+    Left = 0
+    Top = 0
+    Width = 441
+    Height = 274
+    Hint = 'Tipo do Relat'#243'rio'
+    Align = alClient
+    BevelKind = bkFlat
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 640
+    ExplicitHeight = 480
+    object Label1: TLabel
+      Left = 8
+      Top = 16
+      Width = 228
+      Height = 25
+      Caption = 'GERA'#199#195'O DE RELAT'#211'RIOS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -18
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 119
+      Top = 58
+      Width = 41
+      Height = 17
+      Caption = 'Inicial:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 225
+      Top = 58
+      Width = 34
+      Height = 17
+      Caption = 'Final:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 17
+      Top = 58
+      Width = 60
+      Height = 17
+      Caption = 'Intervalo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 17
+      Top = 92
+      Width = 79
+      Height = 15
+      Caption = 'C'#243'digo Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 17
+      Top = 128
+      Width = 79
+      Height = 15
+      Caption = 'C'#243'digo Cidade'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 17
+      Top = 164
+      Width = 60
+      Height = 15
+      Caption = 'Estado (UF)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object BitBtn1: TBitBtn
+      Left = 119
+      Top = 222
+      Width = 100
+      Height = 25
+      Caption = 'Visualizar'
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 225
+      Top = 223
+      Width = 100
+      Height = 25
+      Caption = 'Voltar'
+      TabOrder = 1
+    end
+    object dbe_data_inicio: TMaskEdit
+      Tag = 5
+      Left = 119
+      Top = 89
+      Width = 100
+      Height = 23
+      Hint = 'C'#243'digo Inicial'
+      TabOrder = 2
+      Text = ''
+    end
+    object dbe_data_final: TMaskEdit
+      Tag = 5
+      Left = 225
+      Top = 89
+      Width = 100
+      Height = 23
+      Hint = 'C'#243'digo Final'
+      TabOrder = 3
+      Text = ''
+    end
+  end
+  object MaskEdit1: TMaskEdit
+    Tag = 5
+    Left = 121
+    Top = 127
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Inicial'
+    TabOrder = 1
+    Text = ''
+  end
+  object MaskEdit2: TMaskEdit
+    Tag = 5
+    Left = 227
+    Top = 127
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Final'
+    TabOrder = 2
+    Text = ''
+  end
+  object MaskEdit3: TMaskEdit
+    Tag = 5
+    Left = 121
+    Top = 163
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Inicial'
+    TabOrder = 3
+    Text = ''
+  end
+  object MaskEdit4: TMaskEdit
+    Tag = 5
+    Left = 227
+    Top = 163
+    Width = 100
+    Height = 23
+    Hint = 'C'#243'digo Final'
+    TabOrder = 4
+    Text = ''
+  end
+end
