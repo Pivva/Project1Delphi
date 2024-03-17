@@ -7,18 +7,16 @@
   <div align="justify">
   <h3>Tópicos abordados:</h3>
   
-   + Criando Projeto;
-   + Criando tela de Menu;
-   + Criando tela simples de cadastro de cidades;
-   + Criando tela simples de cadastro de clientes;
-   + Criando tela simples de relatórios;
-   + Criação de relatório simples com ReportBuilder;
-   + Criação de Estrutura de dados;
-   + Funcionalidade de aplicação;
-   + Criação de banco de dados utilizando mySQL;
-   + Criação de tabelas em banco de dados utilizando mySQL;
-   + Criação de Triggers;
-   + Conexão Delphi com banco MySQL;
-   + Requisições (Get, Post, Put e Delete).
+   + Iniciando o projeto;
+   + Desenvolvendo a tela de Menu;
+   + Implementando telas básicas de cadastro de cidades e clientes;
+   + Criando uma interface simples para geração de relatórios;
+   + Configurando um relatório básico utilizando ReportBuilder;
+   + Estabelecendo a estrutura de dados necessária;
+   + Implementando funcionalidades essenciais da aplicação;
+   + Configurando e populando o banco de dados MySQL;
+   + Definindo e criando as tabelas no banco de dados MySQL;
+   + Implementando Triggers para automatizar ações no banco de dados;
+   + Estabelecendo a conexão entre o Delphi e o banco de dados MySQL;
   </div>
 </div>
